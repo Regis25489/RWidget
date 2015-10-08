@@ -161,6 +161,7 @@ public class PileView extends PileAdaptView implements ViewTreeObserver.OnGlobal
             animators[4 * i] = ObjectAnimator.ofFloat(getChildAt(i), "rotation", -10 * i, 0);
             animators[4 * i + 1] = ObjectAnimator.ofFloat(getChildAt(i), "pivotX", pivot[0]);
             animators[4 * i + 2] = ObjectAnimator.ofFloat(getChildAt(i), "pivotY", pivot[1]);
+			//TODO 4.4 alpha 产生图层覆盖问题
             animators[4 * i + 3] = ObjectAnimator.ofFloat(getChildAt(i), "alpha", 0, 1 - (float) Math.pow(0.6, (i + 1)));
         }
         AnimatorSet animatorSet = new AnimatorSet();
